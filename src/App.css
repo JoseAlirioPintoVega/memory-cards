@@ -1,32 +1,39 @@
-
+*{
+    margin: 0;
+    padding:  0;
+}
 .main-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap:1rem;
+    gap:3rem;
     align-items: center;
-    background-color: rgb(220, 245, 226);
+    background-color:#ffffff ;
     height: auto;
     min-height: 100vh;
+}
+.container-circle{
+    background-color: #9F9CFF;
+    border-radius: 1rem;
 }
 .cards-container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: .5rem;
-    height: 250px;
+    gap: 1rem;
+    height: 300px;
     aspect-ratio: 1;
-    margin: 3rem;
-    margin-bottom: 5rem ;
+    margin: 1rem;
     /* background-color: bisque; */
 }
 .title-main{
-    color: rgba(26, 66, 175, 0.896);
+    color: #607EFC;
     font-size: 2.5rem;
 }
 .card{
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 3px solid #2b26b1;
     border-radius: 50%;
     width: 60px;
     aspect-ratio: 1;
@@ -35,18 +42,19 @@
     cursor: pointer;
 }
 .down{
-    background-color: rgb(11, 98, 11)
+    background-color: #65905c;
     
 }
  .up{
-    background-color: rgb(142, 205, 59);
+    background-color: #75f655;
 }
-.selected{
-    background-color: yellow;
+.selected{  
+    background-color: #FFD0B5;
 }
 .icons__cards{
     font-size: 2rem;
     margin: 8px;
+    color: #2b26b1;
 }
 .container-reload{
     display: flex;
@@ -66,11 +74,10 @@
 }
 @media (min-width: 720px){
     .cards-container{
-        
         grid-template-columns: repeat(4, 1fr);
-        gap: .5rem;
-        height: 500px;
-        margin: 5rem;
+        gap: 2rem;
+        height: 600px;
+        margin: 3rem;
         
     } 
     .card{
