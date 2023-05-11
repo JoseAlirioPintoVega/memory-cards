@@ -39,28 +39,34 @@ function App() {
       }
     }, 500);
   };
+  const handlereload = () => {
+    location.reload();
+  };
   return (
     <div className="main-container">
       <h1 className="title-main">Memory Cards</h1>
       <div className="container-circle">
         <div className="cards-container">
           {cardList.map((card, index) => {
-            const Icon = Icons[card.icon];
+            /* const Icon = Icons[card.icon]; */
             return (
               <div
                 key={card.id}
                 className={`${card.status} card`}
                 onClick={() => handleClick(index)}
               >
-                {card.status !== "down" && <Icon className="icons__cards" />}
+                {card.status !== "down" && (
+                  <div className="img-container">
+                    <img className="img__cards" src={`${card.icon}`} alt="" />
+                  </div>
+                )}
               </div>
             );
           })}
         </div>
-      </div>
-
-      <div className="container-reload">
-        <AiOutlineReload className="reload" />
+        <div className="container-reload">
+          <AiOutlineReload className="reload" onClick={handlereload} />
+        </div>
       </div>
     </div>
   );
