@@ -1,11 +1,20 @@
+html{
+    height: 100%;
+}
+body{
+    min-width: 100%;
+    min-width: 100%;
+}
 .main-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap:1rem;
     align-items: center;
     background-color: rgb(220, 245, 226);
     width: 100vw;
     height: 100vh;
+    min-height: 100vh;
 }
 .cards-container{
     display: grid;
